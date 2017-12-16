@@ -9,5 +9,18 @@
 
 def fizzbuzz(integer)
   array = []
-
+  (1..integer).each do |number|
+    if number % 15 == 0
+      array << "fizzbuzz"
+    elsif number % 5 == 0
+      array << "buzz"
+    elsif number % 3 == 0
+      array << "fizz"
+    else
+      array << number.to_s
+    end
+  end
+  p array
 end
+
+fizzbuzz(20)
